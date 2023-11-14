@@ -330,8 +330,15 @@ function getSumToN(n) {
  *   202 => 4  // (2+0+2)
  *   5   => 5  // 5
  */
-function getSumOfDigits(/* num */) {
-  throw new Error('Not implemented');
+function getSumOfDigits(num) {
+  // throw new Error('Not implemented');
+  let sum = 0;
+  const string = num.toString();
+  for (let i = 0; i < string.length; i += 1) {
+    sum += Number(string[i]);
+  }
+
+  return sum;
 }
 
 /**
@@ -345,8 +352,12 @@ function getSumOfDigits(/* num */) {
  *   16  => true
  *   15  => false
  */
-function isPowerOfTwo(/* num */) {
-  throw new Error('Not implemented');
+function isPowerOfTwo(num) {
+  // throw new Error('Not implemented');
+  if (num % 2 !== 0) {
+    return false;
+  }
+  return true;
 }
 
 /**
